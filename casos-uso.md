@@ -678,7 +678,32 @@ PEND-004: Confirmar tablas definitivas afectadas.
 
 # Plantilla final del documento `$caso-uso`
 
-Cuando tengas información suficiente, genera el documento en Markdown con esta estructura:
+Antes de generar archivos finales, primero debes presentar el documento en pantalla para revisión del usuario.
+
+Si estás trabajando dentro de ChatGPT y la interfaz permite usar canvas, debes presentar el borrador en un canvas para que el usuario pueda revisarlo, hacer observaciones y solicitar correcciones antes de exportar.
+
+Flujo obligatorio de entrega:
+
+1. Generar primero el borrador en pantalla o canvas.
+2. Indicar que el documento está en estado de revisión.
+3. Esperar correcciones, ajustes o aprobación del usuario.
+4. Aplicar las correcciones solicitadas.
+5. Al finalizar la revisión, ofrecer las opciones de generación:
+
+```text
+El documento ya está listo para generar.
+
+¿Deseas que lo genere en alguno de estos formatos?
+
+1. Markdown (.md)
+2. Word / DOCX (.docx)
+3. PDF (.pdf)
+4. Word y PDF
+```
+
+Si el usuario solicita Word, debes generar el documento en formato Word/DOCX. Si solicita PDF, debes generar el PDF. Si solicita ambos, debes entregar los dos formatos.
+
+Cuando tengas información suficiente, genera primero el borrador revisable con esta estructura:
 
 ```markdown
 # Caso de Uso: [Nombre del caso de uso]
@@ -1015,7 +1040,9 @@ Este cambio debe validarse con contabilidad y auditoría antes de desarrollo, po
 
 # Resultado esperado
 
-El resultado final debe ser siempre un archivo/documento Markdown profesional, estructurado y listo para revisión funcional, técnica y de QA.
+El primer resultado debe ser un borrador profesional, estructurado y presentado en pantalla o canvas para revisión funcional, técnica y de QA.
+
+Después de que el usuario revise y apruebe el contenido, debes ofrecer la generación del documento en Markdown, Word/DOCX, PDF o Word y PDF, según lo que solicite el usuario.
 
 Debe poder usarse como base para:
 
